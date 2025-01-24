@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "Awfis",
+      "package_name": "com.awfis.mobile",
+      "sha256_cert_fingerprints":
+      ["89:98:52:08:A8:53:2D:C6:E3:21:70:53:A2:4F:F7:DA:78:F0:4F:31:C0:94:C9:88:A3:D4:A9:4E:F4:05:46:01"]
+    }
+  }]
