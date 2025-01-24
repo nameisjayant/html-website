@@ -3,17 +3,18 @@ import React from "react";
 const OpenApp = () => {
   const handleButtonClick = (key) => {
     const appUrl = key ? `coworking-app://${key}` : `coworking-app://`;
-    const storeUrl = "https://play.google.com/store/apps/details?id=com.awfis.mobile";
-    const now = Date.now();
-    // Attempt to open the app
-    window.location.href = appUrl;
+    const storeUrl =
+      "https://play.google.com/store/apps/details?id=com.awfis.mobile";
 
-    // Fallback to Play Store after 2 seconds
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = appUrl;
+
+    document.body.appendChild(iframe);
+
     setTimeout(() => {
-      // Check if the user is still on the same page
-      if (Date.now() - now < 1500) {
-        window.location.href = storeUrl;
-      }
+      document.body.removeChild(iframe);
+      window.location.href = storeUrl;
     }, 1500);
   };
 
