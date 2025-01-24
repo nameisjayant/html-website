@@ -4,7 +4,7 @@ const OpenApp = () => {
   const handleButtonClick = (key) => {
     const appUrl = key ? `coworking-app://${key}` : `coworking-app://`;
     const storeUrl = "https://play.google.com/store/apps/details?id=com.awfis.mobile";
-
+    const now = Date.now();
     // Attempt to open the app
     window.location.href = appUrl;
 
