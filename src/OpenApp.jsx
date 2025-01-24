@@ -3,7 +3,7 @@ import React from 'react';
 const OpenApp = () => {
 
   const handleButtonClick = () => {
-    window.location.href = "coworking-app://"
+    window.location.href = "coworking-app://dashboard"
     setTimeout(()=>{
         window.location.href = "https://play.google.com/store/apps/details?id=com.awfis.mobile"
     },2000)
