@@ -1,19 +1,13 @@
 import React from "react";
 
 const OpenApp = () => {
+ 
   const handleButtonClick = (key) => {
     const appUrl = key ? `coworking-app://${key}` : `coworking-app://`;
-    const storeUrl =
-      "https://play.google.com/store/apps/details?id=com.awfis.mobile";
-
-    const iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = appUrl;
-
-    document.body.appendChild(iframe);
-
+    const storeUrl = "https://play.google.com/store/apps/details?id=com.awfis.mobile";
+    window.location.href = appUrl;
+  
     setTimeout(() => {
-      document.body.removeChild(iframe);
       window.location.href = storeUrl;
     }, 1500);
   };
